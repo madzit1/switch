@@ -1,0 +1,35 @@
+.social{
+    display: flex;
+    gap: 15px;
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        color:var(--light);
+        background-color: var(--accent);
+        border-radius: 50%;
+        padding: 9px;
+        transition: box-shadow 0.5s, outline 0.5s, background-color 0.5s, color 0.5s;
+
+        &:hover {
+            background-color: var(--light);
+            color:var(--accent);
+        }
+
+        &:focus {
+            outline: 2px solid var(--dark);
+        }
+
+        &:active {
+            box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.25), inset -2px -2px 2px 0 rgba(0, 0, 0, 0.25);
+        }
+
+    }
+
+    &__icon{
+        fill: currentColor;
+    }
+}

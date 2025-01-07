@@ -1,4 +1,15 @@
+body {
+    font-family: "Inter", serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    background-color: var(--body);
+    color: var(--dark);
+   transition: background-color 0.5s, color 0.5s;
+}
 
-body{
-    
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }

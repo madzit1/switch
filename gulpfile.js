@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
-const avif = require('gulp-avif')
+const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 const newer = require('gulp-newer');
 const fileInclude = require('gulp-file-include');
@@ -66,9 +66,6 @@ gulp.task('defaul', gulp.series('build'));
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/swiper/swiper-bundle.js',
-        'node_modules/mixitup/dist/mixitup.min.js',
-        'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
         'app/js/**/*.js',
         '!app/js/main.min.js'
     ])

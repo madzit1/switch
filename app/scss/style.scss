@@ -1,7 +1,27 @@
-@import 'vars';
-@import 'fonst';
+:root{
+
+  --dark:#314440;
+  --body:#e2e3e3;
+  --light:#ebeae9;
+  --accent:#4a5660;
+
+  .darkMode.dark{
+    --dark:#B1CCDD;
+    --body:#1C3943;
+    --light:#2E4E53;
+    --accent:#6D9390;
+  }
+
+}
+
+
+@import 'common';
 @import 'reset';
 @import 'global';
+@import 'global/header';
+@import 'hero/hero';
+@import 'global/social';
+
 
 
 

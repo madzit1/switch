@@ -1,0 +1,114 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        background-color: var(--light);
+        padding: 35px 92px;
+        border-radius: 0 0 20px 20px;
+        transition: background-color 0.5s;
+    }
+
+    &__link{
+        border-radius: 6px;
+        transition: opacity 0.5s,  outline 0.5s;
+
+        &:hover{
+         opacity: .50;
+        }
+
+        &:focus{
+           outline: 1px solid var(--dark);
+        }
+
+        &:active{
+            opacity: .50;
+        }
+    }
+
+    &__btn-switch {
+        display: inline-block;
+        border-radius: 30px;
+        width: 130px;
+        height: 50px;
+        background-color: var(--body);
+        box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.25), inset -2px -2px 2px 0 rgba(255, 255, 255, 0.5);
+        position: relative;
+        transition: outline 0.5s, opacity 0.5s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 44px;
+            height: 44px;
+            background-color: var(--body);
+            top: 3px;
+            left: 3px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.25);
+            transition: left 0.5s;
+            transition: left 0.5, background-color 0.5s, box-shadow 0.5s;
+        }
+
+        &:hover {
+            opacity: .70;
+        }
+
+        &:focus {
+            outline: 1px solid #BED9E0;
+            outline-offset: 3px;
+        }
+
+        &:active {
+            &:before {
+                box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.25), inset -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        &.active {
+            &::before {
+                left: 83px;
+                box-shadow: -2px -2px 2px 0 rgba(0, 0, 0, 0.25);
+            }
+
+            .menu__icon {
+                left: 91px;
+
+
+                &--moon {
+                    stroke:#fff;
+                }
+
+                &--sun {
+                    stroke: transparent;
+                }
+            }
+
+        }
+
+    }
+
+    &__icon {
+        position: absolute;
+        top: 10px;
+        left: 9px;
+        transition: left 0.5s;
+        transition: left 0.5s, background-color 0.5s;
+
+        &--sun {
+            stroke: var(--dark);
+            fill: transparent;
+        }
+
+        &--moon {
+            stroke: transparent;
+            fill: transparent;
+        }
+
+
+    }
+}
